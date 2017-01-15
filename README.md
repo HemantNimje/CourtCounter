@@ -3,7 +3,7 @@ Android application to keep track of team scores during a basketball match.
 
 This application is designed to understand and practice the handling of user input in any android application.
 
-[coursework "UDACITY- Android Basics: User Input".
+COURSEWORK: "UDACITY- Android Basics: User Input".
 
 In a basketball match every team can score in 3 ways:
 
