@@ -14,7 +14,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.layout_main);
 
     }
 
@@ -48,8 +48,9 @@ public class MainActivity extends AppCompatActivity {
      * Display the score of Team A
      */
     public void displayForTeamA(int score) {
-        TextView scoreView = (TextView) findViewById(R.id.team_a_score);
-        scoreView.setText(String.valueOf(score));
+        // Update the score display in the textView in layout_main for team A
+        TextView scoreViewNew = findViewById(R.id.team_a_score_main);
+        scoreViewNew.setText(String.valueOf(score));
     }
 
 
@@ -83,8 +84,9 @@ public class MainActivity extends AppCompatActivity {
      * Display the score of Team B
      */
     public void displayForTeamB(int score) {
-        TextView scoreView = (TextView) findViewById(R.id.team_b_score);
-        scoreView.setText(String.valueOf(score));
+        // Update the score display in the textView in layout_main for team B
+        TextView scoreViewNew = findViewById(R.id.team_b_score_main);
+        scoreViewNew.setText(String.valueOf(score));
     }
 
     /*
