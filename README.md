@@ -11,3 +11,7 @@ In a basketball match every team can score in 3 ways:
 2. Within the lane/key/paint - [2 points]
 3. Behind the free-throw line - [1 point]
 
+
+Credits:
+
+Icon made by Smashicons from www.flaticon.com
