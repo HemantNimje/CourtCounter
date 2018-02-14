@@ -8,14 +8,25 @@ import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
 
-    int scoreTeamA = 0;
-    int scoreTeamB = 0;
+    static int scoreTeamA = 0;
+    static int scoreTeamB = 0;
+
+    private static final String TEAM_A_SCORE = "teamAscore";
+    private static final String TEAM_B_SCORE = "teamBscore";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.layout_main);
 
+        if (savedInstanceState != null){
+            if (savedInstanceState.containsKey(TEAM_A_SCORE) && savedInstanceState.containsKey(TEAM_B_SCORE)){
+                int teamAscore = savedInstanceState.getInt(TEAM_A_SCORE);
+                int teamBscore = savedInstanceState.getInt(TEAM_B_SCORE);
+                displayForTeamA(teamAscore);
+                displayForTeamB(teamBscore);
+            }
+        }
     }
 
     /**
@@ -100,5 +111,12 @@ public class MainActivity extends AppCompatActivity {
         displayForTeamB(scoreTeamB);
     }
 
+
+    @Override
+    protected void onSaveInstanceState(Bundle outState) {
+        super.onSaveInstanceState(outState);
+        outState.putInt(TEAM_A_SCORE,scoreTeamA);
+        outState.putInt(TEAM_B_SCORE,scoreTeamB);
+    }
 }
 
